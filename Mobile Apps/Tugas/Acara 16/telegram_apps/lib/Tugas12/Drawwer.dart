@@ -12,9 +12,9 @@ class _DrawerScreenState extends State<DrawerScreen>{
     return Drawer(
       child: ListView(
         children: <Widget>[
-          UserAccountsDrawerHeader(
+          const UserAccountsDrawerHeader(
             accountName: Text("Mochammad Enrique Lazuardi Ramadany"), 
-            currentAccountPicture: CircleAvatar(backgroundImage: AssetImage("assets/img/2.jpg")
+            currentAccountPicture: CircleAvatar(backgroundImage: AssetImage("assets/2.jpg")
             ),
             accountEmail: Text("merico@gmail.com")
             ),

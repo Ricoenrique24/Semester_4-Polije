@@ -11,9 +11,9 @@ class _TelegramState extends State<Telegram> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title:Text ("Telegram"),
-      actions: <Widget>[
-        Padding(padding: const EdgeInsets.all(8.0),
+      appBar: AppBar(title: const Text ("Telegram"),
+      actions:  const <Widget>[
+        Padding(padding: EdgeInsets.all(8.0),
         child: Icon(Icons.search),
         )
       ]
@@ -26,18 +26,18 @@ class _TelegramState extends State<Telegram> {
               radius: 28,
               backgroundImage: NetworkImage(items[i].profileUrl.toString()),
             ),
-            title: Text(items[i].name.toString(), style: TextStyle(fontWeight: FontWeight.bold),),
+            title: Text(items[i].name.toString(), style: const TextStyle(fontWeight: FontWeight.bold),),
             subtitle: Text(items[i].message.toString()),
             trailing: Text(items[i].time.toString()),
           );
         }, 
         separatorBuilder: (ctx,i){
-          return Divider();
+          return const Divider();
         }, itemCount: items.length),
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.create, color: Colors.white),
+        floatingActionButton:  FloatingActionButton(
           backgroundColor: Color(0xFF65a9e0),
-          onPressed: (){}
+          onPressed: (){},
+          child: const Icon(Icons.create, color: Colors.white)
         ),
     );
   }
